@@ -688,7 +688,10 @@ function QuizScreen({ questions, mode, onFinish, onBack }) {
             display:"inline-flex", alignItems:"center", gap:4,
           }}>🔁 もういちど　きく</button>
         </div>
-        <div style={S.hintBox}>💡 {q.hint}</div>
+        {/* ヒント：不正解の時だけ表示 */}
+        {answered && !isCorrect && (
+          <div style={S.hintBox}>💡 {q.hint}</div>
+        )}
         <div style={S.choicesGrid}>
           {q.choices.map(choice=>{
             let bg="#fff",border="3px solid #e0e0e0",col="#333";
