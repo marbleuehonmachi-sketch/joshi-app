@@ -263,7 +263,7 @@ const ALL_QUESTIONS = {
     { id:"ni42", sentence:["みなみ","___","あるきます。"],    blank:1, hint:"どちらへ あるくかを あらわすよ", answer:"に", choices:["に","は","で","も"],  image:"🧭" },
     { id:"ni43", sentence:["きた","___","すすみます。"],      blank:1, hint:"どちらへ すすむかを あらわすよ", answer:"に", choices:["に","は","で","も"],  image:"⬆️" },
     { id:"ni44", sentence:["ちず","___","かきます。"],        blank:1, hint:"どこに かくかを あらわすよ",   answer:"に", choices:["に","は","で","も"],  image:"🗺️" },
-    { id:"ni45", sentence:["きょう","___","かえります。"],    blank:1, hint:"いつ するかを あらわすよ",      answer:"に", choices:["に","は","で","も"],  image:"📅" },
+    { id:"ni45", sentence:["がっこう","___","かえります。"],    blank:1, hint:"どこへ かえるかを あらわすよ",      answer:"に", choices:["に","は","で","も"],  image:"🏫" },
     { id:"ni46", sentence:["しごと","___","いきます。"],      blank:1, hint:"どこに いくかを あらわすよ",    answer:"に", choices:["に","は","で","も"],  image:"💼" },
     { id:"ni47", sentence:["うんどうかい","___","でます。"],  blank:1, hint:"なにに でるかを あらわすよ",    answer:"に", choices:["に","は","で","も"],  image:"🏃" },
     { id:"ni48", sentence:["ゴール","___","はいります。"],    blank:1, hint:"どこに はいるかを あらわすよ",  answer:"に", choices:["に","は","で","も"],  image:"⚽" },
