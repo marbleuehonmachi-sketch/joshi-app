@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 
 // ─── 音声読み上げ ─────────────────────────────────────────────
 function speak(text, rate = 0.85) {
@@ -93,7 +93,7 @@ const ALL_QUESTIONS = {
     { id:"ga28", sentence:["ふね","___","すすみます。"],    blank:1, hint:"だれが・なにが、を あらわすよ", answer:"が", choices:["が","に","で","も"],  image:"⛵" },
     { id:"ga29", sentence:["ロケット","___","とびます。"],  blank:1, hint:"だれが・なにが、を あらわすよ", answer:"が", choices:["が","に","で","も"],  image:"🚀" },
     { id:"ga30", sentence:["ひ","___","もえます。"],        blank:1, hint:"だれが・なにが、を あらわすよ", answer:"が", choices:["が","に","で","も"],  image:"🔥" },
-    { id:"ga31", sentence:["みず","___","わきます。"],      blank:1, hint:"だれが・なにが、を あらわすよ", answer:"が", choices:["が","に","で","も"],  image:"♨️" },
+    { id:"ga31", sentence:["おゆ","___","わきます。"],      blank:1, hint:"だれが・なにが、を あらわすよ", answer:"が", choices:["が","に","で","も"],  image:"♨️" },
     { id:"ga32", sentence:["こおり","___","とけます。"],    blank:1, hint:"だれが・なにが、を あらわすよ", answer:"が", choices:["が","に","で","も"],  image:"🧊" },
     { id:"ga33", sentence:["ねこ","___","なきます。"],      blank:1, hint:"だれが・なにが、を あらわすよ", answer:"が", choices:["が","に","で","も"],  image:"😺" },
     { id:"ga34", sentence:["はっぱ","___","おちます。"],    blank:1, hint:"だれが・なにが、を あらわすよ", answer:"が", choices:["が","に","で","も"],  image:"🍂" },
@@ -198,10 +198,10 @@ const ALL_QUESTIONS = {
     { id:"wa29", sentence:["こうえん","___","たのしいです。"],blank:1, hint:"「〇〇は」で テーマを あらわすよ", answer:"は", choices:["は","に","で","も"],  image:"🌳" },
     { id:"wa30", sentence:["ゆめ","___","たのしいです。"],    blank:1, hint:"「〇〇は」で テーマを あらわすよ", answer:"は", choices:["は","に","で","も"],  image:"💭" },
     { id:"wa31", sentence:["おにぎり","___","おいしいです。"],blank:1, hint:"「〇〇は」で テーマを あらわすよ", answer:"は", choices:["は","に","で","も"],  image:"🍙" },
-    { id:"wa32", sentence:["ラーメン","___","からいです。"],  blank:1, hint:"「〇〇は」で テーマを あらわすよ", answer:"は", choices:["は","に","で","も"],  image:"🍜" },
+    { id:"wa32", sentence:["ラーメン","___","おいしいです。"],  blank:1, hint:"「〇〇は」で テーマを あらわすよ", answer:"は", choices:["は","に","で","も"],  image:"🍜" },
     { id:"wa33", sentence:["カレー","___","からいです。"],    blank:1, hint:"「〇〇は」で テーマを あらわすよ", answer:"は", choices:["は","に","で","も"],  image:"🍛" },
     { id:"wa34", sentence:["レモン","___","すっぱいです。"],  blank:1, hint:"「〇〇は」で テーマを あらわすよ", answer:"は", choices:["は","に","で","も"],  image:"🍋" },
-    { id:"wa35", sentence:["こーひー","___","にがいです。"],  blank:1, hint:"「〇〇は」で テーマを あらわすよ", answer:"は", choices:["は","に","で","も"],  image:"☕" },
+    { id:"wa35", sentence:["コーヒー","___","にがいです。"],  blank:1, hint:"「〇〇は」で テーマを あらわすよ", answer:"は", choices:["は","に","で","も"],  image:"☕" },
     { id:"wa36", sentence:["あさ","___","さむいです。"],      blank:1, hint:"「〇〇は」で テーマを あらわすよ", answer:"は", choices:["は","に","で","も"],  image:"🌄" },
     { id:"wa37", sentence:["よる","___","くらいです。"],      blank:1, hint:"「〇〇は」で テーマを あらわすよ", answer:"は", choices:["は","に","で","も"],  image:"🌃" },
     { id:"wa38", sentence:["なつ","___","あついです。"],      blank:1, hint:"「〇〇は」で テーマを あらわすよ", answer:"は", choices:["は","に","で","も"],  image:"🌞" },
@@ -566,6 +566,17 @@ function QuizScreen({ questions, mode, onFinish, onBack }) {
   const modeColor = mode==="weak"?"#9B59B6":mode==="mixed"?"#667eea":(PARTICLE_CONFIG[mode]?.color||"#667eea");
   const modeLabel = mode==="weak"?"にがてもんだい":mode==="mixed"?"まじり":`「${mode}」れんしゅう`;
 
+  // 選択肢の表示順をシャッフル（問題ごとに位置を変える）
+  const shuffledChoices = useMemo(() => {
+    if (!q) return [];
+    const arr = [...q.choices];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }, [current, q]);
+
   // 問題が変わったら自動読み上げ
   useEffect(() => {
     speakingAnswerRef.current = false;
@@ -693,7 +704,7 @@ function QuizScreen({ questions, mode, onFinish, onBack }) {
           <div style={S.hintBox}>💡 {q.hint}</div>
         )}
         <div style={S.choicesGrid}>
-          {q.choices.map(choice=>{
+          {shuffledChoices.map(choice=>{
             let bg="#fff",border="3px solid #e0e0e0",col="#333";
             if(answered){
               if(choice===q.answer){bg="#00B5A3";border="3px solid #00B5A3";col="#fff";}
