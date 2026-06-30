@@ -224,7 +224,7 @@ const ALL_QUESTIONS = {
     { id:"ni3",  sentence:["いえ","___","かえります。"],      blank:1, hint:"どこへ いくかを あらわすよ",    answer:"に", choices:["に","は","で","も"],  image:"🏠" },
     { id:"ni4",  sentence:["びょういん","___","いきます。"],  blank:1, hint:"どこへ いくかを あらわすよ",    answer:"に", choices:["に","は","で","も"],  image:"🏥" },
     { id:"ni5",  sentence:["いす","___","すわります。"],      blank:1, hint:"どこへ・なにに、を あらわすよ", answer:"に", choices:["に","は","で","も"],  image:"🪑" },
-    { id:"ni6",  sentence:["きのう","___","ねます。"],        blank:1, hint:"いつ するかを あらわすよ",      answer:"に", choices:["に","は","で","も"],  image:"😴" },
+    { id:"ni6",  sentence:["いす","___","すわります。"],        blank:1, hint:"どこに すわるかを あらわすよ",      answer:"に", choices:["に","は","で","も"],  image:"🪑" },
     { id:"ni7",  sentence:["みぎ","___","まがります。"],      blank:1, hint:"どちらへ いくかを あらわすよ",  answer:"に", choices:["に","は","で","も"],  image:"↪️" },
     { id:"ni8",  sentence:["もり","___","はいります。"],      blank:1, hint:"どこへ いくかを あらわすよ",    answer:"に", choices:["に","は","で","も"],  image:"🌲" },
     { id:"ni9",  sentence:["つくえ","___","おきます。"],      blank:1, hint:"どこへ おくかを あらわすよ",    answer:"に", choices:["に","は","で","も"],  image:"🪞" },
@@ -254,7 +254,7 @@ const ALL_QUESTIONS = {
     { id:"ni33", sentence:["おとうと","___","あげます。"],    blank:1, hint:"だれに あげるかを あらわすよ",  answer:"に", choices:["に","は","で","も"],  image:"🎁" },
     { id:"ni34", sentence:["かみ","___","かきます。"],        blank:1, hint:"どこへ かくかを あらわすよ",   answer:"に", choices:["に","は","で","も"],  image:"📄" },
     { id:"ni35", sentence:["みえます","___","てをふります。"],blank:1, hint:"どこへ するかを あらわすよ",   answer:"に", choices:["に","は","で","も"],  image:"👋" },
-    { id:"ni36", sentence:["くだもの","___","なります。"],    blank:1, hint:"だれが・なにが、を あらわすよ",   answer:"が", choices:["が","に","で","も"],  image:"🍊" },
+    { id:"ni36", sentence:["えき","___","むかいます。"],    blank:1, hint:"どこへ むかうかを あらわすよ",   answer:"に", choices:["に","は","で","も"],  image:"🚉" },
     { id:"ni37", sentence:["えいご","___","なります。"],      blank:1, hint:"なにに なるかを あらわすよ",   answer:"に", choices:["に","は","で","も"],  image:"📘" },
     { id:"ni38", sentence:["みち","___","まよいます。"],      blank:1, hint:"どこで するかを あらわすよ",   answer:"に", choices:["に","は","で","も"],  image:"🗺️" },
     { id:"ni39", sentence:["ゆき","___","うもれます。"],      blank:1, hint:"なにに うもれるかを あらわすよ",answer:"に", choices:["に","は","で","も"],  image:"❄️" },
@@ -328,7 +328,7 @@ const PARTICLE_CONFIG = {
   が: { color:"#FF6B6B", bg:"#fff0f0", desc:"だれが・なにが" },
   を: { color:"#00B5A3", bg:"#f0fffe", desc:"〜をする" },
   は: { color:"#E6A800", bg:"#fffbea", desc:"テーマ・話題" },
-  に: { color:"#4A9EDB", bg:"#f0f7ff", desc:"どこに・どこへ" },
+  に: { color:"#4A9EDB", bg:"#f0f7ff", desc:"どこに・だれに" },
   で: { color:"#E8654A", bg:"#fff3f0", desc:"どこで・なにで" },
 };
 
