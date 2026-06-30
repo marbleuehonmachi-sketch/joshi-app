@@ -250,7 +250,7 @@ const ALL_QUESTIONS = {
     { id:"ni29", sentence:["にほん","___","いきます。"],      blank:1, hint:"どこへ いくかを あらわすよ",    answer:"に", choices:["に","は","で","も"],  image:"🗾" },
     { id:"ni30", sentence:["おかあさん","___","あいます。"],  blank:1, hint:"だれに あうかを あらわすよ",    answer:"に", choices:["に","は","で","も"],  image:"👩" },
     { id:"ni31", sentence:["ともだち","___","あいます。"],    blank:1, hint:"だれに あうかを あらわすよ",    answer:"に", choices:["に","は","で","も"],  image:"👫" },
-    { id:"ni32", sentence:["せんせい","___","おしえます。"],  blank:1, hint:"だれに するかを あらわすよ",    answer:"に", choices:["に","は","で","も"],  image:"👩‍🏫" },
+    { id:"ni32", sentence:["ともだち","___","てがみをかきます。"],  blank:1, hint:"だれに するかを あらわすよ",    answer:"に", choices:["に","は","で","も"],  image:"✉️" },
     { id:"ni33", sentence:["おとうと","___","あげます。"],    blank:1, hint:"だれに あげるかを あらわすよ",  answer:"に", choices:["に","は","で","も"],  image:"🎁" },
     { id:"ni34", sentence:["かみ","___","かきます。"],        blank:1, hint:"どこへ かくかを あらわすよ",   answer:"に", choices:["に","は","で","も"],  image:"📄" },
     { id:"ni35", sentence:["みえます","___","てをふります。"],blank:1, hint:"どこへ するかを あらわすよ",   answer:"に", choices:["に","は","で","も"],  image:"👋" },
