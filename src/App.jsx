@@ -767,7 +767,12 @@ function TitleScreen({ onStart, onHistory }) {
     <div style={S.root}>
       <style>{globalCSS}</style>
       <div style={S.card}>
-        <div style={{ display:"flex",justifyContent:"flex-end" }}>
+        <div style={{ display:"flex",justifyContent:"center",gap:8 }}>
+          <a href="mailto:marble.uehonmachi@gmail.com?subject=%E3%81%98%E3%82%87%E3%81%97%E3%82%8C%E3%82%93%E3%81%97%E3%82%85%E3%81%86%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E3%81%94%E6%84%8F%E8%A6%8B&body=%E3%81%94%E6%84%8F%E8%A6%8B%E3%83%BB%E3%81%94%E6%84%9F%E6%83%B3%E3%82%92%E3%81%94%E8%87%AA%E7%94%B1%E3%81%AB%E3%81%8A%E6%9B%B8%E3%81%8D%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%EF%BC%9A%0A%0A" style={{
+            background:"#fff0f0",border:"none",borderRadius:10,padding:"6px 14px",fontSize:13,color:"#E8654A",fontWeight:"bold",cursor:"pointer",textDecoration:"none",display:"inline-block",
+          }}>
+            💌 ご意見・ご感想
+          </a>
           <button onClick={onHistory} style={{ background:"#f0f4ff",border:"none",borderRadius:10,padding:"6px 14px",fontSize:13,color:"#667eea",fontWeight:"bold",cursor:"pointer" }}>
             📊 きろく
           </button>
