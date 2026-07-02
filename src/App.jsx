@@ -134,7 +134,7 @@ const ALL_QUESTIONS = {
     { id:"wo17", sentence:["てがみ","___","だします。"],    blank:1, hint:"「する」「やる」のまえにつくよ",  answer:"を", choices:["を","は","も","へ"],  image:"✉️" },
     { id:"wo18", sentence:["くつ","___","はきます。"],      blank:1, hint:"「する」「やる」のまえにつくよ",  answer:"を", choices:["を","は","も","へ"],  image:"👟" },
     { id:"wo19", sentence:["ふく","___","きます。"],        blank:1, hint:"「する」「やる」のまえにつくよ",  answer:"を", choices:["を","は","も","へ"],  image:"👕" },
-    { id:"wo20", sentence:["はを","___","みがきます。"],    blank:1, hint:"「する」「やる」のまえにつくよ",  answer:"を", choices:["を","は","も","へ"],  image:"🪥" },
+    { id:"wo20", sentence:["は","___","みがきます。"],    blank:1, hint:"「する」「やる」のまえにつくよ",  answer:"を", choices:["を","は","も","へ"],  image:"🪥" },
     { id:"wo21", sentence:["かお","___","あらいます。"],    blank:1, hint:"「する」「やる」のまえにつくよ",  answer:"を", choices:["を","は","も","へ"],  image:"🚿" },
     { id:"wo22", sentence:["て","___","あらいます。"],    blank:1, hint:"「する」「やる」のまえにつくよ",  answer:"を", choices:["を","は","も","へ"],  image:"🧼" },
     { id:"wo23", sentence:["べんとう","___","たべます。"],  blank:1, hint:"「たべる」「のむ」のまえにつくよ", answer:"を", choices:["を","は","も","へ"],  image:"🍱" },
